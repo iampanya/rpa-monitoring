@@ -1,0 +1,5 @@
+{
+  "name": "RPA Data Status Monitor",
+  "description": "An application to monitor the latest data status from various RPA tasks. It allows users to see the last update date for each data type and refresh the status individually.",
+  "requestFramePermissions": []
+}
