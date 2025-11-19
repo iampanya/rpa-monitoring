@@ -6,8 +6,8 @@ import ConfirmDeleteModal from './ConfirmDeleteModal';
 
 interface ManagementPageProps {
   tasks: DataTask[];
-  onAddTask: (task: Omit<DataTask, 'id' | 'lastUpdated'>) => void;
-  onUpdateTask: (task: DataTask) => void;
+  onAddTask: (task: Omit<DataTask, 'id' | 'lastUpdated' | 'created_at'>) => void;
+  onUpdateTask: (task: Omit<DataTask, 'lastUpdated' | 'created_at'>) => void;
   onDeleteTask: (taskId: string) => void;
 }
 
@@ -31,7 +31,7 @@ const ManagementPage: React.FC<ManagementPageProps> = ({ tasks, onAddTask, onUpd
     setIsDeleteModalOpen(true);
   };
 
-  const handleSaveTask = (taskData: Omit<DataTask, 'id' | 'lastUpdated'> | DataTask) => {
+  const handleSaveTask = (taskData: Omit<DataTask, 'id' | 'lastUpdated' | 'created_at'> | Omit<DataTask, 'lastUpdated' | 'created_at'>) => {
     if ('id' in taskData) {
       onUpdateTask(taskData);
     } else {

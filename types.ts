@@ -3,4 +3,5 @@ export interface DataTask {
   title: string;
   sqlQuery: string;
   lastUpdated: Date | null;
+  created_at: string;
 }

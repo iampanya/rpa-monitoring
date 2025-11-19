@@ -5,7 +5,7 @@ import { XMarkIcon } from './Icons';
 interface TaskModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSave: (task: Omit<DataTask, 'id' | 'lastUpdated'> | DataTask) => void;
+  onSave: (task: Omit<DataTask, 'id' | 'lastUpdated' | 'created_at'> | Omit<DataTask, 'lastUpdated' | 'created_at'>) => void;
   taskToEdit?: DataTask | null;
 }
 

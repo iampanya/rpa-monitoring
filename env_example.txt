@@ -1,4 +1,5 @@
 # This is an example file. For production, create a .env file with these variables.
 # Vercel will use the environment variables configured in the project settings.
 
-DATABASE_URL
+VITE_SUPABASE_URL="YOUR_SUPABASE_URL"
+VITE_SUPABASE_ANON_KEY="YOUR_SUPABASE_ANON_KEY"
